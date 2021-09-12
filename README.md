@@ -1,4 +1,4 @@
-# Precompiled Julia environment for Google Colaboratory 
+# Precompiled Julia environment for Google Colaboratory  
 
 <a href="https://colab.research.google.com/github/shivak/julia-colab/blob/master/notebook.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
@@ -9,3 +9,7 @@ the installation time to ~30 seconds. Just hit "Open in Colab" above, run the in
 
 This downloads a Julia binary (from julia.org) and a working .julia "depot" directory (from this repo). Then, it installs IJulia for use in the notebook. The depot directory is tarballed with <a href="compile.sh">compile.sh</a>. 
 Ideally, we'd use PackageCompiler to produce a sysimage; unfortunately, as of this writing, this does not successfully copy over artifacts / JLLs. This notebook is not meant to be a long-term solution - just something to get you up and running on Colab.
+
+## Licensing
+
+The source code in this directory is distributed under the MIT license. The binaries in <a href="depot/">depot/</a>, however, are redistributed under their original terms. These may include e.g. GPL-licensed software.

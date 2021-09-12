@@ -1,5 +1,5 @@
 JULIA_VERSION="1.7.0-beta4"
-PACKAGES='["BenchmarkTools", "Plots", "OrdinaryDiffEq", "DiffEqSensitivity", "Flux", "Zygote", "Distributions", "Statistics", "MLDatasets", "Parameters"]'
+PACKAGES='["IJulia", "BenchmarkTools", "Plots", "OrdinaryDiffEq", "DiffEqSensitivity", "Flux", "Zygote", "Distributions", "Statistics", "MLDatasets", "Parameters"]'
 
 if [ -z `which julia` ]; then
   echo "Installing Julia..."
@@ -15,4 +15,4 @@ julia -e "using Pkg; Pkg.add($PACKAGES)"
 echo "Making tarballs..."
 tar --use-compress-program xz -cf - ~/.julia | split --bytes 95M --numeric-suffix - $JULIA_VERSION.tar.xz.
 
-echo "Done"
+echo "Done!"
